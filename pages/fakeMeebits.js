@@ -155,7 +155,7 @@ export default function FakeMeebits() {
             </div>
             <div className={styles.gallery}>
               {tokens?.map((value, index) => {
-                return <a href={`/fakeMeebits/${index + 1}`}>
+                return <a key={index} href={`/fakeMeebits/${index + 1}`}>
                   <div className={styles.galleryItem}>
                     <img src={value}></img>
                   </div>

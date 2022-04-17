@@ -29,7 +29,7 @@ export default function FakeBaycIndex() {
       if (router.isReady && router.query.id) {
         setRouteId(router.query.id);
       }
-  }, [router.isReady]);
+  }, [router.query.id, router.isReady]);
 
   const detectProvider = () => {
     detectEthereumProvider().then(async (provider) =>  {
@@ -59,7 +59,7 @@ export default function FakeBaycIndex() {
     detectProvider();
   }, []);
 
-  useEffect(() => {
+  useEffect((login = login) => {
     login();
   }, [web3]);
 

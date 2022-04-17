@@ -143,7 +143,7 @@ export default function FakeNefturiansCollection() {
             <div className={styles.gallery}>
                 { tokens.map((item, index) => {
                   return (
-                    <div className={styles.galleryItem}>
+                    <div key={index} className={styles.galleryItem}>
                       <img src={item.imageURL}></img>
                       <h3>{item.name}</h3>
                     </div>

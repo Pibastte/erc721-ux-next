@@ -144,7 +144,7 @@ export default function FakeNefturians() {
             </div>
             <div className={styles.gallery}>
               {tokens?.map((value, index) => {
-                return <a href={`/fakeNefturians/${index}`}>
+                return <a key={index} href={`/fakeNefturians/${index}`}>
                   <div className={styles.galleryItem}>
                     <img src={value}></img>
                   </div>

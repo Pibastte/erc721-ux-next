@@ -134,7 +134,7 @@ export default function FakeBayc() {
             </div>
             <div className={styles.gallery}>
               {tokens?.map((value, index) => {
-                return <a href={`/fakeBayc/${index}`}>
+                return <a key={index} href={`/fakeBayc/${index}`}>
                   <div className={styles.galleryItem}>
                     <img src={value}></img>
                   </div>
